@@ -1,0 +1,88 @@
+.subHero {
+    display: block;
+    position: relative;
+    height: 50vh;
+    width: 100%;
+    background: $main-color;
+
+    &__icone {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 150px;
+        height: 150px;
+
+        &-img {
+            width: 100%;
+            height: auto;
+            animation: infiniteRotate 40s linear infinite; 
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: row; /* mettre en ligne */
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        width: 70%;
+        margin: 0 auto;
+        padding: 10vh 0;
+
+        &-item {
+            min-width: 400px;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            text-align: end;
+            align-items: flex-start;
+
+            &:last-child {
+                flex-direction: column;
+                justify-content: flex-start;
+                text-align: left;
+            }
+
+            &--separator {
+                border-left: 1px solid #fff;
+                height: 80%;
+                margin: 0 80px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+  .subHero {
+    &__content {
+      flex-direction: column;
+      width: 90%;
+      padding: 20px 0;
+
+      &-item {
+        min-width: 0;
+        margin: 20px 0;
+
+        &--separator {
+          margin: 0;
+          border-left: none;
+          border-bottom: 1px solid #fff;
+          height: 1px;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@keyframes infiniteRotate
+{from { transform: rotate(0deg) }
+ to { transform: rotate(359deg) }  /**change to a higher value for more seamless loop*/
+}

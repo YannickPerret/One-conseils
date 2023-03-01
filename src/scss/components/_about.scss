@@ -1,0 +1,89 @@
+.about {
+    height: 95vh;
+    display: block;
+    padding : 10vh 0;
+
+    &__cols {
+        width: 70%;
+        display: flex;
+        flex-direction: row;
+        margin : 0 auto;
+
+        &__item {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            width: 33vw;
+            margin: 0 1vw;
+
+            &-text {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                text-align: start;
+                margin : 0 2vw;
+                margin-bottom: 2rem;
+                gap : 3vh;
+
+                & p {
+                    color: $other-color;
+                }
+
+                & h3 {
+                    margin-bottom: 1rem;
+                }
+                & blockquote {
+                    font-style: italic;
+                    color: $main-color;
+                    font-weight: bold;
+                }
+
+            }
+
+            &-separator {
+                border-left: 1px dashed #000;
+                margin-top: 1px;
+                height: 25vh;
+                width: 1px;
+            }
+
+            &-img {
+                display: flex;
+                flex-direction: column;
+                text-align: left;
+                color : $other-color;
+                width: 30%;
+                margin : 0 3vw;
+
+                & img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            &-info{
+                display : flex;
+                flex-direction: column;
+                padding : 2vh 0;
+                gap : 10px;
+
+                & p{
+                    border-bottom : 1px solid $other-color;
+                }
+            }
+
+            &-social{
+                display: flex;
+                flex-direction: row;
+                width: 20%;
+                gap : 15px;
+
+                & img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+}

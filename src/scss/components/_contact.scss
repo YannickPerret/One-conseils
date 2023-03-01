@@ -1,0 +1,127 @@
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+
+    &__form-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 480px;
+        margin-right: 20px;
+    }
+
+    &__text-container {
+        color: $main-color;
+        text-align: left;
+        margin-bottom: 20px;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    &__input-container {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 20px;
+
+        &__input {
+            width: 48%;
+            height: 40px;
+            background-color: $main-color;
+            color: #fff;
+            border: none;
+            padding: .5vw;
+
+            &::placeholder {
+                color: #fff;
+            }
+
+            &::-ms-input-placeholder {
+                /* Internet Explorer 10-11 */
+                color: #fff;
+            }
+
+            &::-ms-input-placeholder {
+                /* Microsoft Edge */
+                color: #fff;
+            }
+        }
+    }
+
+    &__textarea {
+        width: 100%;
+        height: 250px;
+        margin-bottom: 20px;
+        background-color: $main-color;
+        color: #fff;
+        border: none;
+        padding: .5vw;
+
+        &::placeholder {
+            color: #fff;
+        }
+
+        &::-ms-input-placeholder {
+            /* Internet Explorer 10-11 */
+            color: #fff;
+        }
+
+        &::-ms-input-placeholder {
+            /* Microsoft Edge */
+            color: #fff;
+        }
+    }
+
+    &__button {
+        width: 120px;
+        align-self: flex-end;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        color: $other-color;
+
+        &-container {
+            text-align: left;
+            margin-bottom: 20px;
+            border-top: 2px solid $other-color;
+        }
+
+        & p {
+            border-bottom: 1px solid $other-color;
+        }
+
+        &-icon {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            text-align: center;
+            margin-bottom: 20px;
+            gap :15px;
+
+            & img {
+                width: 10%;
+                height: auto;
+                margin-bottom: 10px;
+            }
+
+            &__text {
+                margin-left: 20px;
+            }
+        }
+
+        &__icon:nth-child(1) {
+            margin-top: 20px;
+        }
+
+    }
+}

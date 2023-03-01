@@ -1,0 +1,113 @@
+$rotation1: 0deg;
+$rotation2: 80deg;
+$rotation3: 180deg;
+$rotation4: 260deg;
+
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    height: 50vh;
+    width: 90vw;
+    margin: 2rem auto;
+    gap: 2%;
+    align-content: space-around;
+
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        width: 17%;
+        gap: .8rem;
+        position: relative;
+
+        &:hover > img {
+            animation: infiniteRotate 20s linear infinite;
+        }
+        &:hover:nth-child(2) > img {
+            animation: infiniteRotate2 20s linear infinite;
+        }
+        &:hover:nth-child(3) > img {
+            animation: infiniteRotate3 10s linear infinite;
+        }
+        &:hover:nth-child(4) > img {
+            animation: infiniteRotate4 20s linear infinite;
+        }
+
+        &:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: -30%;
+            height: 100%;
+            border-right: 1px dashed $other-color;
+        }
+
+        &:nth-of-type(2) > img {
+                transform: rotate($rotation2);
+        }
+
+        &:nth-child(3)>img {
+            transform: rotate($rotation3);
+        }
+
+        &:nth-child(4)>img {
+            transform: rotate($rotation4);
+        }
+
+
+        &-img {
+            display: flex;
+            align-self: center;
+            width: 40%;
+            height: 40%;
+            object-fit: cover;
+        }
+
+        &-title {
+            display: flex;
+            justify-content: center;
+            font-size: 1.2rem;
+            margin: 0.5rem 0;
+            color: initial;
+            text-align: center;
+            height: 60px;
+
+        }
+
+        &-desc {
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            color: initial;
+        }
+
+        &-link {
+            color: $main-color;
+            text-transform: uppercase;
+            text-decoration: none;
+            text-align: center;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+@keyframes infiniteRotate
+{from { transform: rotate(0deg) }
+ to { transform: rotate(359deg) }  /**change to a higher value for more seamless loop*/
+}
+@keyframes infiniteRotate2
+{from { transform: rotate($rotation2) }
+ to { transform: rotate(359deg + $rotation2) }  /**change to a higher value for more seamless loop*/
+}
+@keyframes infiniteRotate3
+{from { transform: rotate($rotation3) }
+ to { transform: rotate(359deg + $rotation3) }  /**change to a higher value for more seamless loop*/
+}
+@keyframes infiniteRotate4
+{from { transform: rotate($rotation4) }
+ to { transform: rotate(359deg + $rotation4) }  /**change to a higher value for more seamless loop*/
+}
