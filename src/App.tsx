@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import About from './pages/Homepage/About'
 import Contact from './pages/Homepage/Contact'
 import Fonctionnement from './pages/Homepage/Fonctionnement'
@@ -11,7 +10,6 @@ import Footer from './template/Footer'
 import Header from './template/header'
 
 function App() {
-
 
   return (
     <>

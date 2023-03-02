@@ -37,8 +37,8 @@ const Footer = () => {
                         <div className="footer__container__item--link">
                             <p>Suivre One-Conseils</p>
                             <div className="footer__container__item--image">
-                                <img src={linkedin} alt="linkedin" width="100%" height="auto" />
-                                <img src={facebook} alt="facebook" width="100%" height="auto" />
+                                <a href="https://likedin.com/"><img src={linkedin} alt="linkedin" width="100%" height="auto" /></a>
+                                <a href="https://facebook.com"><img src={facebook} alt="facebook" width="100%" height="auto" /></a>
                             </div>
                         </div>
                     </div>

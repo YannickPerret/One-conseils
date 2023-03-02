@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from '../assets/images/logo.svg';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
@@ -14,7 +15,7 @@ const Header = () => {
           <li className="header__menu-item header__menu-item--has-dropdown">
             <a href="#">Nos services</a>
             <ul className="header__submenu">
-              <li><a href="#1">Assurances</a></li>
+              <li><Link to="/assurance">Assurances</Link></li>
               <li><a href="#2">Comptabilité & Administration</a></li>
               <li><a href="#3">Immobilier</a></li>
               <li><a href="#4">Informatique</a></li>
